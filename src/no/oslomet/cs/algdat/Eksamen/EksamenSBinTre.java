@@ -1,10 +1,7 @@
 package no.oslomet.cs.algdat.Eksamen;
 
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class EksamenSBinTre<T> {
     private static final class Node<T>   // en indre nodeklasse
@@ -83,8 +80,25 @@ public class EksamenSBinTre<T> {
         return antall == 0;
     }
 
-    public boolean leggInn(T verdi) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+    public boolean leggInn(T verdi) { //Brukt kode fra kompendiet til Ulf Uttersrud, kapittel 5.2.3 a)
+        Objects.requireNonNull(verdi, "Ulovlig med nullverdier!");
+
+        Node<T> gjeldende = rot, temp = null;
+        int comparator = 0;
+        while(gjeldende != null){
+            temp = gjeldende;
+            comparator = comp.compare(verdi,gjeldende.verdi);
+            gjeldende = comparator <0 ? gjeldende.venstre : gjeldende.høyre;
+        }
+
+        gjeldende = new Node<>(verdi,temp);
+
+        if(temp == null) rot = gjeldende;
+        else if (comparator < 0) temp.venstre = gjeldende;
+        else temp.høyre = gjeldende;
+
+        antall++;
+        return true;
     }
 
     public boolean fjern(T verdi) {
@@ -132,8 +146,14 @@ public class EksamenSBinTre<T> {
     }
 
     public static void main(String[] args){
-        EksamenSBinTre<String> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
-        System.out.println(tre.antall);
+        //EksamenSBinTre<String> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
+        //System.out.println(tre.antall);
+
+        //--------------Oppgave 1--------------
+        Integer[] a = {4,7,2,9,5,10,8,1,3,6};
+        EksamenSBinTre<Integer> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
+        for (int verdi : a) tre.leggInn(verdi);
+        System.out.println(tre.antall());
     }
 
 
