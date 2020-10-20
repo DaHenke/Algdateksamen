@@ -150,10 +150,21 @@ public class EksamenSBinTre<T> {
         //System.out.println(tre.antall);
 
         //--------------Oppgave 1--------------
-        Integer[] a = {4,7,2,9,5,10,8,1,3,6};
-        EksamenSBinTre<Integer> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
-        for (int verdi : a) tre.leggInn(verdi);
-        System.out.println(tre.antall());
+        Integer[] a1 = {4,7,2,9,5,10,8,1,3,6};
+        EksamenSBinTre<Integer> tre1 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        for (int verdi : a1) tre1.leggInn(verdi);
+        System.out.println(tre1.antall());
+
+        //--------------Oppgave 2--------------
+        Integer[] a2 = {4,7,2,9,4,10,8,7,4,6};
+        EksamenSBinTre<Integer> tre2 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        for(int verdi : a2) tre2.leggInn(verdi);
+
+        System.out.println(tre2.antall());
+        System.out.println(tre2.antall(5));
+        System.out.println(tre2.antall(4));
+        System.out.println(tre2.antall(7));
+        System.out.println(tre2.antall(10));
     }
 
 
