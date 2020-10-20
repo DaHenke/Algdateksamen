@@ -110,7 +110,23 @@ public class EksamenSBinTre<T> {
     }
 
     public int antall(T verdi) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if(antall() > 0 && inneholder(verdi)) {
+            int forekomster = 0;
+            Node<T> gjeldende = rot;
+            while (gjeldende != null) {
+                if(comp.compare(verdi, gjeldende.verdi) == 0){
+                    forekomster++;
+                    gjeldende = gjeldende.høyre;
+                }else if (comp.compare(verdi, gjeldende.verdi) > 0){
+                    gjeldende = gjeldende.høyre;
+                }else{
+                    gjeldende = gjeldende.venstre;
+                }
+            }
+            return forekomster;
+        }else {
+            return 0;
+        }
     }
 
     public void nullstill() {
@@ -149,13 +165,14 @@ public class EksamenSBinTre<T> {
         //EksamenSBinTre<String> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
         //System.out.println(tre.antall);
 
-        //--------------Oppgave 1--------------
+        System.out.println("--------------Oppgave 1--------------");
         Integer[] a1 = {4,7,2,9,5,10,8,1,3,6};
         EksamenSBinTre<Integer> tre1 = new EksamenSBinTre<>(Comparator.naturalOrder());
         for (int verdi : a1) tre1.leggInn(verdi);
         System.out.println(tre1.antall());
 
-        //--------------Oppgave 2--------------
+
+        System.out.println("--------------Oppgave 2--------------");
         Integer[] a2 = {4,7,2,9,4,10,8,7,4,6};
         EksamenSBinTre<Integer> tre2 = new EksamenSBinTre<>(Comparator.naturalOrder());
         for(int verdi : a2) tre2.leggInn(verdi);
@@ -165,6 +182,7 @@ public class EksamenSBinTre<T> {
         System.out.println(tre2.antall(4));
         System.out.println(tre2.antall(7));
         System.out.println(tre2.antall(10));
+
     }
 
 
