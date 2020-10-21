@@ -75,6 +75,7 @@ public class EksamenSBinTre<T> {
             p = nestePostorden(p);
         }
 
+        System.out.println(s.toString());
         return s.toString();
     }
 
@@ -96,12 +97,15 @@ public class EksamenSBinTre<T> {
         gjeldende = new Node<>(verdi,temp);
 
         if(temp == null){
+            System.out.print(gjeldende.verdi +", ");
             rot = gjeldende;
         }
         else if (comparator < 0){
+            System.out.print(gjeldende.verdi +", ");
             temp.venstre = gjeldende;
         }
         else{
+            System.out.print(gjeldende.verdi +", ");
             temp.høyre = gjeldende;
         }
 
@@ -141,42 +145,37 @@ public class EksamenSBinTre<T> {
         throw new UnsupportedOperationException("Ikke kodet ennå!");
     }
 
-    private static <T> Node<T> førstePostorden(Node<T> p) {
+    private static <T> Node<T> førstePostorden(Node<T> p) { //Brukt kode fra kompendiet til Ulf Uttersrud, kapittel 5.1.7 g)
         if(p != null) {
-            Node<T> start = p;
             while (true) {
-                if (start.venstre != null) {
-                    start = start.venstre;
+                if (p.venstre != null) {
+                    p = p.venstre;
                 }
-                else if (start.høyre != null){
-                    start = start.høyre;
+                else if (p.høyre != null){
+                    p = p.høyre;
                 }
                 else{
-                    System.out.println(start.verdi);
-                    return start;
+                    return p;
                 }
             }
         }
         return null;
     }
 
-    private static <T> Node<T> nestePostorden(Node<T> p) {
+    private static <T> Node<T> nestePostorden(Node<T> p) { //Leste gjennom regel for den neste i Postorden i Kompendium til Ulf Uttersrud. Kode skrevet selv.
         if (p != null) {
             if (p.forelder == null) {
                 return null;
             } else if (p == p.forelder.høyre) {
                 p = p.forelder;
-                return p;
             } else if (p == p.forelder.venstre) {
                 if (p.forelder.høyre == null) {
                     p = p.forelder;
-                    return p;
                 } else {
-                    while (p.forelder != null) {
-                        p = p.forelder;
+                    p = p.forelder.høyre;
+                    while(p.venstre != null){
+                        p = p.venstre;
                     }
-                    p = p.høyre;
-                    return p;
                 }
             }
             return p;
