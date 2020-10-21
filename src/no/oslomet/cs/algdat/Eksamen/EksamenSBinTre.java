@@ -1,6 +1,8 @@
 package no.oslomet.cs.algdat.Eksamen;
 
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.*;
 
 public class EksamenSBinTre<T> {
@@ -93,9 +95,15 @@ public class EksamenSBinTre<T> {
 
         gjeldende = new Node<>(verdi,temp);
 
-        if(temp == null) rot = gjeldende;
-        else if (comparator < 0) temp.venstre = gjeldende;
-        else temp.høyre = gjeldende;
+        if(temp == null){
+            rot = gjeldende;
+        }
+        else if (comparator < 0){
+            temp.venstre = gjeldende;
+        }
+        else{
+            temp.høyre = gjeldende;
+        }
 
         antall++;
         return true;
@@ -114,13 +122,13 @@ public class EksamenSBinTre<T> {
             int forekomster = 0;
             Node<T> gjeldende = rot;
             while (gjeldende != null) {
-                if(comp.compare(verdi, gjeldende.verdi) == 0){
+                if (comp.compare(verdi, gjeldende.verdi) > 0){
+                    gjeldende = gjeldende.høyre;
+                }else if (comp.compare(verdi,gjeldende.verdi) < 0){
+                    gjeldende = gjeldende.venstre;
+                }else{
                     forekomster++;
                     gjeldende = gjeldende.høyre;
-                }else if (comp.compare(verdi, gjeldende.verdi) > 0){
-                    gjeldende = gjeldende.høyre;
-                }else{
-                    gjeldende = gjeldende.venstre;
                 }
             }
             return forekomster;
@@ -134,11 +142,46 @@ public class EksamenSBinTre<T> {
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if(p != null) {
+            Node<T> start = p;
+            while (true) {
+                if (start.venstre != null) {
+                    start = start.venstre;
+                }
+                else if (start.høyre != null){
+                    start = start.høyre;
+                }
+                else{
+                    System.out.println(start.verdi);
+                    return start;
+                }
+            }
+        }
+        return null;
     }
 
     private static <T> Node<T> nestePostorden(Node<T> p) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if (p != null) {
+            if (p.forelder == null) {
+                return null;
+            } else if (p == p.forelder.høyre) {
+                p = p.forelder;
+                return p;
+            } else if (p == p.forelder.venstre) {
+                if (p.forelder.høyre == null) {
+                    p = p.forelder;
+                    return p;
+                } else {
+                    while (p.forelder != null) {
+                        p = p.forelder;
+                    }
+                    p = p.høyre;
+                    return p;
+                }
+            }
+            return p;
+        }
+        return null;
     }
 
     public void postorden(Oppgave<? super T> oppgave) {

@@ -17,4 +17,11 @@ Se oblig-tekst for alle krav, og husk spesielt på følgende:
 Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, og hver logg-melding beskriver det jeg har gjort av endringer.
 
 * Oppgave 1: Løste ved å implementere ...
-* Oppgave 2: ...
+* Oppgave 2: Løste ved å først sette opp en if-setning som sjekker om binærtreet er tomt eller ikke og inneholder verdien eller ikke. Hvis det er tomt returneres 0.
+             Deretter initialiserer jeg en teller, som skal øke hvis metoden finner verdien jeg ser etter, og en hjelpenode for å traversere gjennom treet.
+             Når hjelpenoden ikke er null starter jeg i rotnoden. 
+             Hvis nodeverdien som sjekkes er mindre enn "verdi"-parameteren fortsetter vi på dens høyre barn og telleren øker ikke.
+             Hvis nodeverdien som sjekkes er større enn "verdi"-parameteren fortsetter vi på dens venstre barn og telleren øker ikke.
+             Hvis ikke ser jeg om noden har verdien eller ikke. Hvis den er lik verdien øker telleren og fortsetter ned på høyre side.
+             Til slutt returneres telleren med antall forekomster av verdien som er etterspurt. 
+             
