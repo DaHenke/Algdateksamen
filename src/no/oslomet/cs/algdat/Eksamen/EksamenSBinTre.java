@@ -74,8 +74,6 @@ public class EksamenSBinTre<T> {
             s.add(p.verdi.toString());
             p = nestePostorden(p);
         }
-
-        System.out.println(s.toString());
         return s.toString();
     }
 
@@ -97,15 +95,12 @@ public class EksamenSBinTre<T> {
         gjeldende = new Node<>(verdi,temp);
 
         if(temp == null){
-            System.out.print(gjeldende.verdi +", ");
             rot = gjeldende;
         }
         else if (comparator < 0){
-            System.out.print(gjeldende.verdi +", ");
             temp.venstre = gjeldende;
         }
         else{
-            System.out.print(gjeldende.verdi +", ");
             temp.høyre = gjeldende;
         }
 
