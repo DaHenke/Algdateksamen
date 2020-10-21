@@ -146,41 +146,36 @@ public class EksamenSBinTre<T> {
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) { //Brukt kode fra kompendiet til Ulf Uttersrud, kapittel 5.1.7 g)
-        if(p != null) {
-            while (true) {
-                if (p.venstre != null) {
-                    p = p.venstre;
-                }
-                else if (p.høyre != null){
-                    p = p.høyre;
-                }
-                else{
-                    return p;
-                }
+        while (p != null) {
+            if (p.venstre != null) {
+                p = p.venstre;
+            }
+            else if (p.høyre != null){
+                p = p.høyre;
+            }
+            else{
+                return p;
             }
         }
         return null;
     }
 
-    private static <T> Node<T> nestePostorden(Node<T> p) { //Leste gjennom regel for den neste i Postorden i Kompendium til Ulf Uttersrud. Kode skrevet selv.
-        if (p != null) {
-            if (p.forelder == null) {
-                return null;
-            } else if (p == p.forelder.høyre) {
+    private static <T> Node<T> nestePostorden(Node<T> p) { //Leste gjennom regel for den neste i Postorden i Kompendium til Ulf Uttersrud kapittel 5.1.7. Kode skrevet selv.
+        if (p.forelder == null) {
+            return null;
+        } else if (p == p.forelder.høyre) {
+            p = p.forelder;
+        } else if (p == p.forelder.venstre) {
+            if (p.forelder.høyre == null) {
                 p = p.forelder;
-            } else if (p == p.forelder.venstre) {
-                if (p.forelder.høyre == null) {
-                    p = p.forelder;
-                } else {
-                    p = p.forelder.høyre;
-                    while(p.venstre != null){
-                        p = p.venstre;
-                    }
+            } else {
+                p = p.forelder.høyre;
+                while(p.venstre != null){
+                    p = p.venstre;
                 }
             }
-            return p;
         }
-        return null;
+        return p;
     }
 
     public void postorden(Oppgave<? super T> oppgave) {

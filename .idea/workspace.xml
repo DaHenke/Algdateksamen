@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" afterDir="false" />
     </list>
@@ -133,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603192739869</updated>
       <workItem from="1603192742712" duration="17324000" />
-      <workItem from="1603271401610" duration="10795000" />
+      <workItem from="1603271401610" duration="14994000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -177,7 +177,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1603280151407</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Fullført oppgave 3. Test er godkjent.">
+      <created>1603283086400</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1603283086400</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,53 +196,54 @@
     <MESSAGE value="Starter på oppgave 2. Lagt til utskriftskoden i main" />
     <MESSAGE value="Ferdig med oppgave 2. Får riktig utskrift og test er godkjent." />
     <MESSAGE value="Endret litt på oppgave 2. Skrevet forklaring i README.md. Startet på oppgave 3. Får gult kryss på test og feil på 3d." />
-    <option name="LAST_COMMIT_MESSAGE" value="Endret litt på oppgave 2. Skrevet forklaring i README.md. Startet på oppgave 3. Får gult kryss på test og feil på 3d." />
+    <MESSAGE value="Fullført oppgave 3. Test er godkjent." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fullført oppgave 3. Test er godkjent." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="669" y="6" key="CommitChangelistDialog2" timestamp="1603280150053">
+    <state x="320" y="6" key="CommitChangelistDialog2" timestamp="1603283085360">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="669" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603280150053" />
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom" timestamp="1603283005688">
+    <state x="320" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603283085360" />
+    <state width="724" height="263" key="GridCell.Tab.0.bottom" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603283005688" />
-    <state width="1493" height="207" key="GridCell.Tab.0.center" timestamp="1603283005687">
+    <state width="724" height="263" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603288820843" />
+    <state width="724" height="263" key="GridCell.Tab.0.center" timestamp="1603288820842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603283005687" />
-    <state width="1493" height="207" key="GridCell.Tab.0.left" timestamp="1603283005686">
+    <state width="724" height="263" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603288820842" />
+    <state width="724" height="263" key="GridCell.Tab.0.left" timestamp="1603288820842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603283005686" />
-    <state width="1493" height="207" key="GridCell.Tab.0.right" timestamp="1603283005687">
+    <state width="724" height="263" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603288820842" />
+    <state width="724" height="263" key="GridCell.Tab.0.right" timestamp="1603288820842">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="207" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603283005687" />
-    <state width="724" height="263" key="GridCell.Tab.1.bottom" timestamp="1603277690438">
+    <state width="724" height="263" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603288820842" />
+    <state width="724" height="263" key="GridCell.Tab.1.bottom" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603277690438" />
-    <state width="724" height="263" key="GridCell.Tab.1.center" timestamp="1603277690438">
+    <state width="724" height="263" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603288820843" />
+    <state width="724" height="263" key="GridCell.Tab.1.center" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603277690438" />
-    <state width="724" height="263" key="GridCell.Tab.1.left" timestamp="1603277690438">
+    <state width="724" height="263" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1603288820843" />
+    <state width="724" height="263" key="GridCell.Tab.1.left" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603277690438" />
-    <state width="724" height="263" key="GridCell.Tab.1.right" timestamp="1603277690438">
+    <state width="724" height="263" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1603288820843" />
+    <state width="724" height="263" key="GridCell.Tab.1.right" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="724" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603277690438" />
+    <state width="724" height="263" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1603288820843" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1603196805224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1603280153950">
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1603283088767">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603280153950" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603283088767" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
