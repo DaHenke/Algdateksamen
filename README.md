@@ -30,5 +30,12 @@ Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, o
              Hvis noden hverken har venstre eller høyre barn returneres p, som er noden nestePostorden starter på. 
              nestePostOrden starter med å sjekke om vi er på rot-noden. Hvis p er et høyre barn til sin forelder er forelder neste.
              Hvis p er venstre barnet til sin forelder sjekker vi om forelder har flere barn. Hvis den ikke har høyre barn er forelder neste.
-             Hvis forelder har høyre barn går vi ned til sistnevnte barn og sjekker om den har et venstre barn.  
-             
+             Hvis forelder har høyre barn går vi ned til sistnevnte barn og sjekker om den har et venstre barn.
+* Oppgave 4: Løste ved å implementere kode, fra kompendium til Ulf Uttersrud, til rekursiv metode for preorden (5.1.7a) og inorden (5.1.7d). 
+             For postorden() satte jeg først hjelpenoden p til å være den ytterste noden i treet, ved å kalle på førstePostorden() med rot som inn-parameter. (Se forklaring fir førstePostorden i oppgave 3).
+             Deretter satte jeg en while-løkke slik oppgaveteksten ber om som kjører så lenge p ikke er null. 
+             I denne løkken henter jeg verdien til noden jeg befinner meg på, og går deretter videre til neste node.
+             Den neste noden finner jeg ved å kalle på nestePostorden() med nåværende node som inn-parameter. (Se forklaring for nestePostorden i oppgave 3.)
+             For den rekursive metoden fulgte jeg kode-eksemplet til rekursive metode for preorden og inorden. Her endret jeg dermed på koden ved å følge den rekursive definisjon for postorden.
+             Først starter jeg i rotnoden og ser om den har et venstre-barn, og hvis den har det går jeg ned til det barnet. Hvis ikke sjekker jeg om den har et høyre-barn og gjør det samme.
+             Slik fortsetter metoden til den ytterst venstre noden ikke har barn. Deretter kaller jeg på oppgave som henter verdien til noden.
