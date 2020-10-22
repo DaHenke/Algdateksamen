@@ -178,16 +178,19 @@ public class EksamenSBinTre<T> {
         Node<T> p = rot;
         oppgave.utførOppgave(p.verdi);
 
-        while(p != null){
-
+        if(p != null) {
+            if (p.venstre != null) {
+                p = p.venstre;
+            } else if (p.høyre != null) {
+                p = p.høyre;
+            }
         }
 
-
-
-        while(p != null){
+        while(true){
             p = nestePostorden(p);
         }
     }
+
 
     public void postordenRecursive(Oppgave<? super T> oppgave) {
         postordenRecursive(rot, oppgave);
