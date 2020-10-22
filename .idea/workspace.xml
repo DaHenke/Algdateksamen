@@ -134,7 +134,7 @@
       <workItem from="1603192742712" duration="17324000" />
       <workItem from="1603271401610" duration="14994000" />
       <workItem from="1603288907228" duration="229000" />
-      <workItem from="1603378499877" duration="1847000" />
+      <workItem from="1603378499877" duration="5516000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -202,7 +202,13 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1603381977566</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Kjørt test av kode på oppgave 4. Får NullPointerException i nestePostorden()">
+      <created>1603382384028</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1603382384028</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,29 +225,34 @@
     <MESSAGE value="Skrevet forklaring til oppgave 3 i README.md og endret litt på kode i oppgave 3" />
     <MESSAGE value="Fjernet noen System.out.print-linjer" />
     <MESSAGE value="Startet på oppgave 4." />
-    <option name="LAST_COMMIT_MESSAGE" value="Startet på oppgave 4." />
+    <MESSAGE value="Kjørt test av kode på oppgave 4. Får NullPointerException i nestePostorden()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kjørt test av kode på oppgave 4. Får NullPointerException i nestePostorden()" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="6" key="CommitChangelistDialog2" timestamp="1603381976576">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603382641615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="320" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603381976576" />
-    <state width="1493" height="204" key="GridCell.Tab.0.bottom" timestamp="1603382318981">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1603382641615" />
+    <state x="320" y="6" key="CommitChangelistDialog2" timestamp="1603382383269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603382318981" />
-    <state width="1493" height="204" key="GridCell.Tab.0.center" timestamp="1603382318981">
+    <state x="320" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603382383269" />
+    <state width="723" height="204" key="GridCell.Tab.0.bottom" timestamp="1603385791950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603382318981" />
-    <state width="1493" height="204" key="GridCell.Tab.0.left" timestamp="1603382318981">
+    <state width="723" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603385791950" />
+    <state width="723" height="204" key="GridCell.Tab.0.center" timestamp="1603385791950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603382318981" />
-    <state width="1493" height="204" key="GridCell.Tab.0.right" timestamp="1603382318981">
+    <state width="723" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603385791950" />
+    <state width="723" height="204" key="GridCell.Tab.0.left" timestamp="1603385791950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603382318981" />
+    <state width="723" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603385791950" />
+    <state width="723" height="204" key="GridCell.Tab.0.right" timestamp="1603385791950">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="723" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603385791950" />
     <state width="724" height="263" key="GridCell.Tab.1.bottom" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -262,10 +273,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1603381980684">
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2" timestamp="1603382386152">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603381980684" />
+    <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603382386152" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
