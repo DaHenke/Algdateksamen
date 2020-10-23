@@ -198,7 +198,34 @@ public class EksamenSBinTre<T> {
     }
 
     public ArrayList<T> serialize() {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        ArrayList<T> array = new ArrayList<>();
+
+        Node<T> p = rot, q = p.forelder;
+        array.add(p.verdi);
+
+        while(true){
+            if(p.venstre != null){
+                p = p.venstre;
+                array.add(p.verdi);
+                q = p.forelder;
+            }
+            if(p.høyre != null){
+                p = p.høyre;
+                array.add(p.verdi);
+                q = p.forelder;
+            }
+            if(p.venstre == null && p.høyre == null){
+                if (p.equals(q.venstre) && q.høyre != null) {
+                    p = p.forelder;
+                    q = p.forelder;
+                    p = q.høyre;
+                    array.add(p.verdi);
+                }else{
+                    System.out.println(array.toString());
+                    return array;
+                }
+            }
+        }
     }
 
     static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
@@ -226,6 +253,8 @@ public class EksamenSBinTre<T> {
         System.out.println(tre2.antall(4));
         System.out.println(tre2.antall(7));
         System.out.println(tre2.antall(10));
+
+        System.out.println("--------------Oppgave 5--------------");
 
     }
 
