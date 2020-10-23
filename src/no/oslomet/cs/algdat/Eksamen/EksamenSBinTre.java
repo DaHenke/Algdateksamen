@@ -200,32 +200,21 @@ public class EksamenSBinTre<T> {
     public ArrayList<T> serialize() {
         ArrayList<T> array = new ArrayList<>();
 
-        Node<T> p = rot, q = p.forelder;
-        array.add(p.verdi);
+        Node<T> p = rot;
 
-        while(true){
-            if(p.venstre != null){
-                p = p.venstre;
-                array.add(p.verdi);
-                q = p.forelder;
-            }
-            if(p.høyre != null){
-                p = p.høyre;
-                array.add(p.verdi);
-                q = p.forelder;
-            }
-            if(p.venstre == null && p.høyre == null){
-                if (p.equals(q.venstre) && q.høyre != null) {
-                    p = p.forelder;
-                    q = p.forelder;
-                    p = q.høyre;
-                    array.add(p.verdi);
-                }else{
-                    System.out.println(array.toString());
-                    return array;
-                }
-            }
+        Queue<Node<T>> queue = new ArrayDeque<>();
+        queue.add(p);
+
+        while(!queue.isEmpty()){
+            p = queue.poll();
+            array.add(p.verdi);
+
+            if(p.høyre != null)queue.add(p.høyre);
+            if(p.venstre != null)queue.add(p.venstre);
         }
+
+        System.out.println(array.toString());
+        return array;
     }
 
     static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
@@ -255,7 +244,14 @@ public class EksamenSBinTre<T> {
         System.out.println(tre2.antall(10));
 
         System.out.println("--------------Oppgave 5--------------");
-
+        Integer[] a5 = {4,7,2,9,4,10,8,7,4,6};
+        EksamenSBinTre<Integer> tre5 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        for(int verdi : a5) {
+            System.out.print(verdi+", ");
+            tre5.leggInn(verdi);
+        }
+        System.out.println();
+        tre5.serialize();
     }
 
 
