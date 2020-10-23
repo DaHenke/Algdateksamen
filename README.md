@@ -39,3 +39,10 @@ Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, o
              For den rekursive metoden fulgte jeg kode-eksemplet til rekursive metode for preorden og inorden. Her endret jeg dermed på koden ved å følge den rekursive definisjon for postorden.
              Først starter jeg i rotnoden og ser om den har et venstre-barn, og hvis den har det går jeg ned til det barnet. Hvis ikke sjekker jeg om den har et høyre-barn og gjør det samme.
              Slik fortsetter metoden til den ytterst venstre noden ikke har barn. Deretter kaller jeg på oppgave som henter verdien til noden.
+* Oppgave 5: Løste serialize ved å se på kode, for iterativ traversing med nivåorden, i kompendium til Ulf Uttersrud kapittel 5.1.6.
+             For denne metoden sjekker jeg først om treet jeg tar er tomt eller ikke. Hvis ikke oppretter jeg en ArrayList som skal inneholde alle verdiene fra et binært tre. 
+             Deretter oppretter jeg en kø som skal traversere gjennom det binære treet. Først legger jeg inn roten i køen, og deretter (hvis køen ikke er tom) henter jeg noden fra køen og sletter den fra køen.
+             Verdien til noden blir så lagt inn i ArrayList. Etter dette traverserer jeg meg videre gjennom treet og legger til eventuelle venstre- og høyre-barn samtidig, for så å repetere samme prosess som beskrevet i de forrige setningene.
+             Til slutt i metoden returneres en ferdig fylt ut ArrayList.
+             For deserialize opprettes først et nytt Binært tre som tar inn comparatoren c. Deretter bruker jeg en for-løkke som går gjennom ArrayListen jeg tar inn, og legger inn nye noder per index ved å kalle på leggInn-metoden fra oppgave 1 (se beskrivelse for oppgave 1).
+             Til slutt returnerer jeg det fullstendige binære treet.

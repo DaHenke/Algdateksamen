@@ -198,6 +198,10 @@ public class EksamenSBinTre<T> {
     }
 
     public ArrayList<T> serialize() {
+        if(tom()){
+            return null;
+        }
+
         ArrayList<T> array = new ArrayList<>();
 
         Node<T> p = rot;
@@ -255,6 +259,7 @@ public class EksamenSBinTre<T> {
         }
         System.out.println();
         tre5.serialize();
+        deserialize(tre5.serialize(), Comparator.naturalOrder());
     }
 
 
