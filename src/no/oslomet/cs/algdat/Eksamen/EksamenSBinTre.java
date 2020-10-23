@@ -209,16 +209,19 @@ public class EksamenSBinTre<T> {
             p = queue.poll();
             array.add(p.verdi);
 
-            if(p.høyre != null)queue.add(p.høyre);
             if(p.venstre != null)queue.add(p.venstre);
+            if(p.høyre != null)queue.add(p.høyre);
         }
-
-        System.out.println(array.toString());
         return array;
     }
 
     static <K> EksamenSBinTre<K> deserialize(ArrayList<K> data, Comparator<? super K> c) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        EksamenSBinTre<K> tree = new EksamenSBinTre<>(c);
+
+        for(int i = 0; i < data.size(); i++){
+            tree.leggInn(data.get(i));
+        }
+        return tree;
     }
 
     public static void main(String[] args){

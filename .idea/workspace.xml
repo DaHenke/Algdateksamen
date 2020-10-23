@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Startet på oppgave 5, med forsøk på kode til serialize().">
+    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Brukt kø i serialize() og får ut array, ser nå på dezerialize.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" afterDir="false" />
@@ -51,7 +51,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
-  <component name="RunManager" selected="Application.EksamenSBinTre">
+  <component name="RunManager" selected="JUnit.EksamenTest">
     <configuration name="EksamenSBinTre" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.Eksamen.EksamenSBinTre" />
       <module name="Algdateksamen" />
@@ -93,22 +93,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EksamenTest.oppgave2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Algdateksamen" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="no.oslomet.cs.algdat.Eksamen.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat.Eksamen" />
-      <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.Eksamen.EksamenTest" />
-      <option name="METHOD_NAME" value="oppgave2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="EksamenTest.oppgave3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Algdateksamen" />
       <extension name="coverage">
@@ -141,13 +125,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EksamenTest.oppgave5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Algdateksamen" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="no.oslomet.cs.algdat.Eksamen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="no.oslomet.cs.algdat.Eksamen" />
+      <option name="MAIN_CLASS_NAME" value="no.oslomet.cs.algdat.Eksamen.EksamenTest" />
+      <option name="METHOD_NAME" value="oppgave5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EksamenSBinTre" />
         <item itemvalue="JUnit.EksamenTest" />
+        <item itemvalue="JUnit.EksamenTest.oppgave5" />
+        <item itemvalue="Application.EksamenSBinTre" />
         <item itemvalue="JUnit.EksamenTest.oppgave4" />
         <item itemvalue="JUnit.EksamenTest.oppgave3" />
-        <item itemvalue="JUnit.EksamenTest.oppgave2" />
       </list>
     </recent_temporary>
   </component>
@@ -166,7 +166,7 @@
       <workItem from="1603271401610" duration="14994000" />
       <workItem from="1603288907228" duration="229000" />
       <workItem from="1603378499877" duration="7911000" />
-      <workItem from="1603465575848" duration="6468000" />
+      <workItem from="1603465575848" duration="10794000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -252,7 +252,13 @@
       <option name="presentableId" value="LOCAL−00014" />
       <updated>1603466941285</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL−00015" summary="Brukt kø i serialize() og får ut array, ser nå på dezerialize.">
+      <created>1603472188001</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1603472188001</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +290,8 @@
     <MESSAGE value="Kjørt test av kode på oppgave 4. Får NullPointerException i nestePostorden()" />
     <MESSAGE value="Fullført oppgave 4 ved å se i kompendium kapittel 5.1.7. Test er godkjent" />
     <MESSAGE value="Startet på oppgave 5, med forsøk på kode til serialize()." />
-    <option name="LAST_COMMIT_MESSAGE" value="Startet på oppgave 5, med forsøk på kode til serialize()." />
+    <MESSAGE value="Brukt kø i serialize() og får ut array, ser nå på dezerialize." />
+    <option name="LAST_COMMIT_MESSAGE" value="Brukt kø i serialize() og får ut array, ser nå på dezerialize." />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603382641615">
@@ -295,29 +302,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603385938970" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603471905930">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603476589220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603471905930" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603476589220" />
     <state width="1317" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603471905929">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603476589220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603471905929" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603476589220" />
     <state width="1317" height="179" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603471905929">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603476589220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603386993780" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603471905929" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603476589220" />
     <state width="1317" height="179" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603471905929">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603476589220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603471905929" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603476589220" />
     <state width="1317" height="179" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
     <state width="724" height="263" key="GridCell.Tab.1.bottom" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
@@ -339,18 +346,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603466943435">
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603472189440">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603385942547" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603466943435" />
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603472189440" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1603192763975" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603195246454">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="723" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603472194438">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1603195246454" />
+    <state x="723" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603472194438" />
   </component>
 </project>
