@@ -248,12 +248,10 @@ public class EksamenSBinTre<T> {
 
     public void nullstill() {
         //throw new UnsupportedOperationException("Ikke kodet ennå!");
-
         while(!tom()){
             fjern(førstePostorden(rot).verdi);
             nullstill();
         }
-
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) { //Brukt kode fra kompendiet til Ulf Uttersrud, kapittel 5.1.7 g)
@@ -389,6 +387,9 @@ public class EksamenSBinTre<T> {
         System.out.println(tre6.antall());
 
         System.out.println(tre6 + " " + tre6.toString());
+
+        tre6.nullstill();
+        System.out.println(tre6.toStringPostOrder());
         /*EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
         int[] a = {6, 3, 9, 1, 5, 7, 10, 2, 4, 8, 11, 6, 8};
         for (int verdi : a) tre6.leggInn(verdi);
