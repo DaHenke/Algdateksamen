@@ -74,6 +74,7 @@ public class EksamenSBinTre<T> {
             s.add(p.verdi.toString());
             p = nestePostorden(p);
         }
+        System.out.println(s.toString());
         return s.toString();
     }
 
@@ -213,16 +214,19 @@ public class EksamenSBinTre<T> {
             return null;
         } else if (p == p.forelder.høyre) {
             p = p.forelder;
-        } else if (p == p.forelder.venstre) {
+        }else if (p == p.forelder.venstre) {
             if (p.forelder.høyre == null) {
                 p = p.forelder;
             } else {
                 p = p.forelder.høyre;
                 while(p.venstre != null){
                     p = p.venstre;
+                }while(p.høyre != null){
+                    p = p.høyre;
                 }
             }
         }
+        System.out.println(p.verdi);
         return p;
     }
 
@@ -315,7 +319,7 @@ public class EksamenSBinTre<T> {
         deserialize(tre5.serialize(), Comparator.naturalOrder());
 
         System.out.println("--------------Oppgave 6--------------");
-        int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
+        /*int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
         EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
         for(int verdi : a6) tre6.leggInn(verdi);
         //System.out.println(tre6.fjernAlle(4));
@@ -327,7 +331,14 @@ public class EksamenSBinTre<T> {
 
         System.out.println("Antall: "+tre6.antall());
 
-        System.out.println(tre6 + " " + tre6.toStringPostOrder());
+        System.out.println(tre6 + " " + tre6.toStringPostOrder());*/
+        EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        int[] a = {6, 3, 9, 1, 5, 7, 10, 2, 4, 8, 11, 6, 8};
+        for (int verdi : a) tre6.leggInn(verdi);
+        System.out.println("Antall: "+tre6.antall());
+        System.out.println(tre6.toStringPostOrder());
+
+
     }
 
 
