@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Rettet opp en feil i fjern(T). Forelder får nå korrekt verdi i alle noder. Får ikke lenger NullPointerException eller StackOverflow-error.">
+    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Testet nullstill(T) og fjernAlle(T). Feil på 6u i fjernAlle(T) og får StackOverflowError i nullstill(T)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" afterDir="false" />
@@ -165,7 +165,7 @@
       <workItem from="1603288907228" duration="229000" />
       <workItem from="1603378499877" duration="7911000" />
       <workItem from="1603465575848" duration="14753000" />
-      <workItem from="1603532937551" duration="13824000" />
+      <workItem from="1603532937551" duration="17081000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -293,7 +293,13 @@
       <option name="presentableId" value="LOCAL−00021" />
       <updated>1603544340983</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL−00022" summary="Testet nullstill(T) og fjernAlle(T). Feil på 6u i fjernAlle(T) og får StackOverflowError i nullstill(T)">
+      <created>1603549328923</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1603549328923</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +338,8 @@
     <MESSAGE value="Prøvd kode, fra 5.2.8 d) i kompendium, fjern(T). Får feil på 6b og 6e." />
     <MESSAGE value="Fant en liten mangel i nestePostorden. Rettet opp med en while-løkke. Fortsatt NullPointerException i fjern(T)" />
     <MESSAGE value="Rettet opp en feil i fjern(T). Forelder får nå korrekt verdi i alle noder. Får ikke lenger NullPointerException eller StackOverflow-error." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rettet opp en feil i fjern(T). Forelder får nå korrekt verdi i alle noder. Får ikke lenger NullPointerException eller StackOverflow-error." />
+    <MESSAGE value="Testet nullstill(T) og fjernAlle(T). Feil på 6u i fjernAlle(T) og får StackOverflowError i nullstill(T)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testet nullstill(T) og fjernAlle(T). Feil på 6u i fjernAlle(T) og får StackOverflowError i nullstill(T)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603382641615">
@@ -343,29 +350,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603385938970" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603549016791">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603552465092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603549016791" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603552465092" />
     <state width="1317" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603549016791">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603552465092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603549016791" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603552465092" />
     <state width="1317" height="179" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603549016791">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603552465092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603386993780" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603549016791" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603552465092" />
     <state width="1317" height="179" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603549016791">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603552465092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603549016791" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603552465092" />
     <state width="1317" height="179" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
     <state width="724" height="263" key="GridCell.Tab.1.bottom" timestamp="1603288820843">
       <screen x="0" y="0" width="1536" height="824" />
@@ -387,11 +394,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603544342517">
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603549330051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603385942547" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603544342517" />
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603549330051" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

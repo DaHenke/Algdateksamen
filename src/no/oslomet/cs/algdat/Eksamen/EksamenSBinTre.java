@@ -110,7 +110,7 @@ public class EksamenSBinTre<T> {
     }
 
     public boolean fjern(T verdi) {
-        if(inneholder(verdi)) {
+        if(!tom() && inneholder(verdi)) {
             if (verdi == null) return false; //treet har ingen nullverdier
 
             Node<T> p = rot, q = null; // q skal være forelder til p
@@ -130,6 +130,9 @@ public class EksamenSBinTre<T> {
                 Node<T> barn = p.venstre != null ? p.venstre : p.høyre; // b for barn
                 if (p == rot) {
                     rot = barn;
+                    if(rot != null) {
+                        rot.forelder = null;
+                    }
                 } else if (p == q.venstre) {
                     q.venstre = barn;
                     if (barn != null) {
@@ -216,10 +219,9 @@ public class EksamenSBinTre<T> {
                 System.out.println(node.verdi);
             }
         }*/
-        while(this.inneholder(verdi)){
+        while(inneholder(verdi)){
             fjern(verdi);
             antallfjernet++;
-            antall--;
         }
         return antallfjernet;
     }
@@ -246,10 +248,12 @@ public class EksamenSBinTre<T> {
 
     public void nullstill() {
         //throw new UnsupportedOperationException("Ikke kodet ennå!");
+
         while(!tom()){
             fjern(førstePostorden(rot).verdi);
             nullstill();
         }
+
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) { //Brukt kode fra kompendiet til Ulf Uttersrud, kapittel 5.1.7 g)
@@ -376,20 +380,16 @@ public class EksamenSBinTre<T> {
         deserialize(tre5.serialize(), Comparator.naturalOrder());
 
         System.out.println("--------------Oppgave 6--------------");
-        /*int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
+        int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
         EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
         for(int verdi : a6) tre6.leggInn(verdi);
-        //System.out.println(tre6.fjernAlle(4));
-        //tre6.fjernAlle(7);
-        System.out.println(tre6.toStringPostOrder());
+        System.out.println(tre6.fjernAlle(4));
+        tre6.fjernAlle(7);tre6.fjern(8);
 
-        System.out.println("Antall: "+tre6.antall());
-        tre6.fjern(8);
+        System.out.println(tre6.antall());
 
-        System.out.println("Antall: "+tre6.antall());
-
-        System.out.println(tre6 + " " + tre6.toStringPostOrder());*/
-        EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        System.out.println(tre6 + " " + tre6.toString());
+        /*EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
         int[] a = {6, 3, 9, 1, 5, 7, 10, 2, 4, 8, 11, 6, 8};
         for (int verdi : a) tre6.leggInn(verdi);
         System.out.println("Antall: "+tre6.antall());
@@ -401,8 +401,7 @@ public class EksamenSBinTre<T> {
         System.out.println(tre6.toStringPostOrder());
 
         tre6.nullstill();
-        System.out.println(tre6.toStringPostOrder());
-
+        System.out.println(tre6.toStringPostOrder());*/
     }
 
 
