@@ -260,6 +260,17 @@ public class EksamenSBinTre<T> {
         System.out.println();
         tre5.serialize();
         deserialize(tre5.serialize(), Comparator.naturalOrder());
+
+        System.out.println("--------------Oppgave 6--------------");
+        int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
+        EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        for(int verdi : a6) tre6.leggInn(verdi);
+        System.out.println(tre6.fjernAlle(4));
+        tre6.fjernAlle(7); tre6.fjern(8);
+
+        System.out.println(tre6.antall());
+
+        System.out.println(tre6 + " " + tre6.toString());
     }
 
 
