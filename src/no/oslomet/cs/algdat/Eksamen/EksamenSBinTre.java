@@ -134,17 +134,17 @@ public class EksamenSBinTre<T> {
                     q.venstre = barn;
                     if (barn != null) {
                         barn.forelder = q;
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
                     } else {
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
+                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 } else {
                     q.høyre = barn;
                     if (barn != null) {
                         barn.forelder = q;
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
                     } else {
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
+                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 }
             } else { //tilfelle 3
@@ -168,7 +168,60 @@ public class EksamenSBinTre<T> {
     }
 
     public int fjernAlle(T verdi) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        int antallfjernet = 0;
+        /*Node<T> p = rot;
+
+        ArrayDeque<Node<T>> queue = new ArrayDeque<>();
+        while(p != null) {
+            if (p.verdi == verdi) {
+                queue.add(p);
+                System.out.println(p.verdi);
+                if (p.høyre != null) {
+                    while (!queue.isEmpty()) {
+                        if (p.høyre != null) {
+                            p = p.høyre;
+                            if (p.verdi == verdi) {
+                                queue.add(p);
+                                System.out.println(p.verdi);
+                            }
+                        } else {
+                            if (p.venstre != null) {
+                                p = p.venstre;
+                            }
+                            if (p.verdi == verdi) {
+                                queue.add(p);
+                                System.out.println(p.verdi);
+                            }
+                        }
+                    }
+                }
+            } else if (comp.compare(verdi, p.verdi) < 0) {
+                if (p.venstre != null) {
+                    p = p.venstre;
+                }
+                if (p.høyre != null) {
+                    while (!queue.isEmpty()) {
+                        if (p.høyre != null) {
+                            p = p.høyre;
+                            if (p.verdi == verdi) {
+                                queue.add(p);
+                                System.out.println(p.verdi);
+                            }
+                        }
+                    }
+                }
+            }
+            while(!queue.isEmpty()){
+                Node<T> node = queue.pollLast();
+                System.out.println(node.verdi);
+            }
+        }*/
+        while(this.inneholder(verdi)){
+            fjern(verdi);
+            antallfjernet++;
+            antall--;
+        }
+        return antallfjernet;
     }
 
     public int antall(T verdi) {
@@ -192,7 +245,11 @@ public class EksamenSBinTre<T> {
     }
 
     public void nullstill() {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        //throw new UnsupportedOperationException("Ikke kodet ennå!");
+        while(!tom()){
+            fjern(førstePostorden(rot).verdi);
+            nullstill();
+        }
     }
 
     private static <T> Node<T> førstePostorden(Node<T> p) { //Brukt kode fra kompendiet til Ulf Uttersrud, kapittel 5.1.7 g)
@@ -338,6 +395,12 @@ public class EksamenSBinTre<T> {
         System.out.println("Antall: "+tre6.antall());
         System.out.println(tre6.toStringPostOrder());
         tre6.fjern(10);
+        System.out.println(tre6.toStringPostOrder());
+
+        tre6.fjernAlle(8);
+        System.out.println(tre6.toStringPostOrder());
+
+        tre6.nullstill();
         System.out.println(tre6.toStringPostOrder());
 
     }
