@@ -132,18 +132,19 @@ public class EksamenSBinTre<T> {
                     rot = barn;
                 } else if (p == q.venstre) {
                     q.venstre = barn;
-                    barn.forelder = q;
-                    System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                    if (barn != null) {
+                        barn.forelder = q;
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                    } else {
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
+                    }
                 } else {
                     q.høyre = barn;
                     if (barn != null) {
+                        barn.forelder = q;
                         System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
                     } else {
-                        if (barn != null) {
-                            System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
-                        } else {
-                            System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
-                        }
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 }
             } else { //tilfelle 3
@@ -226,7 +227,6 @@ public class EksamenSBinTre<T> {
                 }
             }
         }
-        System.out.println(p.verdi);
         return p;
     }
 
@@ -337,7 +337,8 @@ public class EksamenSBinTre<T> {
         for (int verdi : a) tre6.leggInn(verdi);
         System.out.println("Antall: "+tre6.antall());
         System.out.println(tre6.toStringPostOrder());
-
+        tre6.fjern(10);
+        System.out.println(tre6.toStringPostOrder());
 
     }
 
