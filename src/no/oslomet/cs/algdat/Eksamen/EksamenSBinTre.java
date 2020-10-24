@@ -109,7 +109,60 @@ public class EksamenSBinTre<T> {
     }
 
     public boolean fjern(T verdi) {
-        throw new UnsupportedOperationException("Ikke kodet ennå!");
+        if(inneholder(verdi)) {
+            if (verdi == null) return false; //treet har ingen nullverdier
+
+            Node<T> p = rot, q = null; // q skal være forelder til p
+
+            while (p != null) {
+                int c = comp.compare(verdi, p.verdi); // sammmenligner
+                if (c < 0) { // går til venstre
+                    q = p;
+                    p = p.venstre;
+                } else if (c > 0) { // går til høyre
+                    q = p;
+                    p = p.høyre;
+                } else break; // den søkte verdien ligger i p
+            }
+            if (p == null) return false; // finner ikke verdien
+            if (p.venstre == null || p.høyre == null) { // tilfelle 1) og 2)
+                Node<T> barn = p.venstre != null ? p.venstre : p.høyre; // b for barn
+                if (p == rot) {
+                    rot = barn;
+                } else if (p == q.venstre) {
+                    q.venstre = barn;
+                    barn.forelder = q;
+                    System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                } else {
+                    q.høyre = barn;
+                    if (barn != null) {
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                    } else {
+                        if (barn != null) {
+                            System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                        } else {
+                            System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
+                        }
+                    }
+                }
+            } else { //tilfelle 3
+                Node<T> s = p, r = p.høyre; //finner neste i inorden
+                while (r.venstre != null) {
+                    s = r; // s er forelder til r
+                    r = r.venstre;
+                }
+                p.verdi = r.verdi; //kopierer verdien i r til p
+
+                if (s != p) {
+                    s.venstre = r.høyre;
+                } else {
+                    s.høyre = r.høyre;
+                }
+            }
+            antall--; // det er nå en node mindre i treet
+            return true;
+        }
+        return false;
     }
 
     public int fjernAlle(T verdi) {
@@ -265,12 +318,16 @@ public class EksamenSBinTre<T> {
         int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
         EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
         for(int verdi : a6) tre6.leggInn(verdi);
-        System.out.println(tre6.fjernAlle(4));
-        tre6.fjernAlle(7); tre6.fjern(8);
+        //System.out.println(tre6.fjernAlle(4));
+        //tre6.fjernAlle(7);
+        System.out.println(tre6.toStringPostOrder());
 
-        System.out.println(tre6.antall());
+        System.out.println("Antall: "+tre6.antall());
+        tre6.fjern(8);
 
-        System.out.println(tre6 + " " + tre6.toString());
+        System.out.println("Antall: "+tre6.antall());
+
+        System.out.println(tre6 + " " + tre6.toStringPostOrder());
     }
 
 
