@@ -46,3 +46,4 @@ Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, o
              Til slutt i metoden returneres en ferdig fylt ut ArrayList.
              For deserialize opprettes først et nytt Binært tre som tar inn comparatoren c. Deretter bruker jeg en for-løkke som går gjennom ArrayListen jeg tar inn, og legger inn nye noder per index ved å kalle på leggInn-metoden fra oppgave 1 (se beskrivelse for oppgave 1).
              Til slutt returnerer jeg det fullstendige binære treet.
+* Oppgave 6: 

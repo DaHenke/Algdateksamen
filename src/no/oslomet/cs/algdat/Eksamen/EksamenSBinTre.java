@@ -309,6 +309,9 @@ public class EksamenSBinTre<T> {
         while (p != null) {
             p.venstre = null;
             p.høyre = null;
+            if(p == rot){
+                rot = null;
+            }
             antall--;
             p = nestePostorden(p);
         }
