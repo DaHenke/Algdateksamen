@@ -137,17 +137,17 @@ public class EksamenSBinTre<T> {
                     q.venstre = barn;
                     if (barn != null) {
                         barn.forelder = q;
-                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
                     } else {
-                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 } else {
                     q.høyre = barn;
                     if (barn != null) {
                         barn.forelder = q;
-                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
                     } else {
-                        //System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
+                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 }
             } else { //tilfelle 3
@@ -171,24 +171,73 @@ public class EksamenSBinTre<T> {
     }
 
     public int fjernAlle(T verdi) {
+        if(!inneholder(verdi)){
+            return 0;
+        }
+
         int antallfjernet = 0;
-        /*Node<T> p = rot;
+        Node<T> p = rot;
+
+        if(antall == 1){
+            if(p.verdi == verdi){
+                fjern(p.verdi);
+                antallfjernet++;
+            }
+            else{
+                return 0;
+            }
+            return antallfjernet;
+        }
 
         ArrayDeque<Node<T>> queue = new ArrayDeque<>();
-        while(p != null) {
+        while(p != null){
+            if(p.venstre == null && p.høyre == null){
+                break;
+            }
+            System.out.println("start: "+p.verdi);
+            if(comp.compare(verdi,p.verdi)>=0){
+                if(p != rot){
+                    p = p.høyre;
+                }
+                if(p.verdi == verdi) {
+                    System.out.println("lagt inn i kø: "+p.verdi);
+                    queue.add(p);
+                }
+                System.out.println(p.verdi);
+                if(p.høyre != null) {
+                    p = p.høyre;
+                }
+                System.out.println("neste: "+p.verdi);
+            }else{
+                p = p.venstre;
+                System.out.println("neste: "+p.verdi);
+                if(p.verdi == verdi){
+                    System.out.println("lagt inn i kø: "+p.verdi);
+                    queue.add(p);
+                }
+            }
+
+        }
+        while(!queue.isEmpty()){
+            Node<T> node = queue.poll();
+            fjern(node.verdi);
+            antallfjernet++;
+        }
+        /*while(p != null) {
             if (p.verdi == verdi) {
                 queue.add(p);
                 System.out.println(p.verdi);
                 if (p.høyre != null) {
+                    p=p.høyre;
                     while (!queue.isEmpty()) {
                         if (p.høyre != null) {
-                            p = p.høyre;
                             if (p.verdi == verdi) {
+                                p = p.høyre;
                                 queue.add(p);
                                 System.out.println(p.verdi);
                             }
                         } else {
-                            if (p.venstre != null) {
+                            if (p.venstre != null && comp.compare(p.verdi,p.høyre.verdi)<0) {
                                 p = p.venstre;
                             }
                             if (p.verdi == verdi) {
@@ -213,16 +262,25 @@ public class EksamenSBinTre<T> {
                         }
                     }
                 }
-            }
-            while(!queue.isEmpty()){
+            }*/
+            /*while(!queue.isEmpty()){
                 Node<T> node = queue.pollLast();
+                node = node.forelder;
+                if(node.venstre != null){
+                    node.venstre = null;
+                }if(node.høyre != null){
+                    node.høyre =null;
+                }
                 System.out.println(node.verdi);
+                node = null;
+                antallfjernet++;
             }
         }*/
-        while(inneholder(verdi)){
+        /*while(inneholder(verdi)){
             fjern(verdi);
             antallfjernet++;
-        }
+            antall--;
+        }*/
         return antallfjernet;
     }
 
@@ -250,6 +308,7 @@ public class EksamenSBinTre<T> {
         //throw new UnsupportedOperationException("Ikke kodet ennå!");
         while(!tom()){
             fjern(førstePostorden(rot).verdi);
+            System.out.println(antall);
             nullstill();
         }
     }
@@ -378,18 +437,22 @@ public class EksamenSBinTre<T> {
         deserialize(tre5.serialize(), Comparator.naturalOrder());
 
         System.out.println("--------------Oppgave 6--------------");
-        int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
         EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
+        /*int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
+
         for(int verdi : a6) tre6.leggInn(verdi);
+        System.out.println(tre6.toStringPostOrder());
         System.out.println(tre6.fjernAlle(4));
-        tre6.fjernAlle(7);tre6.fjern(8);
+        //tre6.fjernAlle(7);
+        System.out.println("her:" + tre6.toStringPostOrder());
+        //tre6.fjern(8);
 
         System.out.println(tre6.antall());
 
-        System.out.println(tre6 + " " + tre6.toString());
+        System.out.println(tre6 + " " + tre6.toStringPostOrder());
 
         tre6.nullstill();
-        System.out.println(tre6.toStringPostOrder());
+        System.out.println(tre6.toStringPostOrder());*/
         /*EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
         int[] a = {6, 3, 9, 1, 5, 7, 10, 2, 4, 8, 11, 6, 8};
         for (int verdi : a) tre6.leggInn(verdi);
@@ -403,6 +466,12 @@ public class EksamenSBinTre<T> {
 
         tre6.nullstill();
         System.out.println(tre6.toStringPostOrder());*/
+
+        int[] b = {1, 4, 1, 3, 1, 2, 1, 1};
+        for (int verdi : b) tre6.leggInn(verdi);
+        System.out.println(tre6.toStringPostOrder());
+        System.out.println(tre6.fjernAlle(1));
+        System.out.println(tre6.toStringPostOrder());
     }
 
 
