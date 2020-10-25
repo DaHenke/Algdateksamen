@@ -74,7 +74,6 @@ public class EksamenSBinTre<T> {
             s.add(p.verdi.toString());
             p = nestePostorden(p);
         }
-        System.out.println(s.toString());
         return s.toString();
     }
 
@@ -109,25 +108,25 @@ public class EksamenSBinTre<T> {
         return true;
     }
 
-    public boolean fjern(T verdi) {
+    public boolean fjern(T verdi) { // Brukt kode fra kompendium til Uld Uttersrud, kapittel 5.2.8 d).
         if(!tom() && inneholder(verdi)) {
-            if (verdi == null) return false; //treet har ingen nullverdier
+            if (verdi == null) return false;
 
-            Node<T> p = rot, q = null; // q skal være forelder til p
+            Node<T> p = rot, q = null;
 
             while (p != null) {
-                int c = comp.compare(verdi, p.verdi); // sammmenligner
-                if (c < 0) { // går til venstre
+                int c = comp.compare(verdi, p.verdi);
+                if (c < 0) {
                     q = p;
                     p = p.venstre;
-                } else if (c > 0) { // går til høyre
+                } else if (c > 0) {
                     q = p;
                     p = p.høyre;
-                } else break; // den søkte verdien ligger i p
+                } else break;
             }
-            if (p == null) return false; // finner ikke verdien
-            if (p.venstre == null || p.høyre == null) { // tilfelle 1) og 2)
-                Node<T> barn = p.venstre != null ? p.venstre : p.høyre; // b for barn
+            if (p == null) return false;
+            if (p.venstre == null || p.høyre == null) {
+                Node<T> barn = p.venstre != null ? p.venstre : p.høyre;
                 if (p == rot) {
                     rot = barn;
                     if(rot != null) {
@@ -137,26 +136,20 @@ public class EksamenSBinTre<T> {
                     q.venstre = barn;
                     if (barn != null) {
                         barn.forelder = q;
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
-                    } else {
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 } else {
                     q.høyre = barn;
                     if (barn != null) {
                         barn.forelder = q;
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + barn.verdi + ", Barn forelder: " + barn.forelder.verdi);
-                    } else {
-                        System.out.println("Slettet: " + p.verdi + ", Slettet sin forelder: " + p.forelder.verdi + ", Barn: " + "null" + ", Barn forelder: " + q.verdi);
                     }
                 }
             } else { //tilfelle 3
-                Node<T> s = p, r = p.høyre; //finner neste i inorden
+                Node<T> s = p, r = p.høyre;
                 while (r.venstre != null) {
-                    s = r; // s er forelder til r
+                    s = r;
                     r = r.venstre;
                 }
-                p.verdi = r.verdi; //kopierer verdien i r til p
+                p.verdi = r.verdi;
 
                 if (s != p) {
                     s.venstre = r.høyre;
@@ -164,7 +157,7 @@ public class EksamenSBinTre<T> {
                     s.høyre = r.høyre;
                 }
             }
-            antall--; // det er nå en node mindre i treet
+            antall--;
             return true;
         }
         return false;
@@ -188,99 +181,30 @@ public class EksamenSBinTre<T> {
             }
             return antallfjernet;
         }
-
-        ArrayDeque<Node<T>> queue = new ArrayDeque<>();
         while(p != null){
             if(p.venstre == null && p.høyre == null){
                 break;
             }
-            System.out.println("start: "+p.verdi);
             if(comp.compare(verdi,p.verdi)>=0){
                 if(p != rot){
                     p = p.høyre;
                 }
                 if(p.verdi == verdi) {
-                    System.out.println("lagt inn i kø: "+p.verdi);
-                    queue.add(p);
+                    fjern(p.verdi);
+                    antallfjernet++;
                 }
-                System.out.println(p.verdi);
                 if(p.høyre != null) {
                     p = p.høyre;
                 }
-                System.out.println("neste: "+p.verdi);
             }else{
                 p = p.venstre;
-                System.out.println("neste: "+p.verdi);
                 if(p.verdi == verdi){
-                    System.out.println("lagt inn i kø: "+p.verdi);
-                    queue.add(p);
+                    fjern(p.verdi);
+                    antallfjernet++;
                 }
             }
 
         }
-        while(!queue.isEmpty()){
-            Node<T> node = queue.poll();
-            fjern(node.verdi);
-            antallfjernet++;
-        }
-        /*while(p != null) {
-            if (p.verdi == verdi) {
-                queue.add(p);
-                System.out.println(p.verdi);
-                if (p.høyre != null) {
-                    p=p.høyre;
-                    while (!queue.isEmpty()) {
-                        if (p.høyre != null) {
-                            if (p.verdi == verdi) {
-                                p = p.høyre;
-                                queue.add(p);
-                                System.out.println(p.verdi);
-                            }
-                        } else {
-                            if (p.venstre != null && comp.compare(p.verdi,p.høyre.verdi)<0) {
-                                p = p.venstre;
-                            }
-                            if (p.verdi == verdi) {
-                                queue.add(p);
-                                System.out.println(p.verdi);
-                            }
-                        }
-                    }
-                }
-            } else if (comp.compare(verdi, p.verdi) < 0) {
-                if (p.venstre != null) {
-                    p = p.venstre;
-                }
-                if (p.høyre != null) {
-                    while (!queue.isEmpty()) {
-                        if (p.høyre != null) {
-                            p = p.høyre;
-                            if (p.verdi == verdi) {
-                                queue.add(p);
-                                System.out.println(p.verdi);
-                            }
-                        }
-                    }
-                }
-            }*/
-            /*while(!queue.isEmpty()){
-                Node<T> node = queue.pollLast();
-                node = node.forelder;
-                if(node.venstre != null){
-                    node.venstre = null;
-                }if(node.høyre != null){
-                    node.høyre =null;
-                }
-                System.out.println(node.verdi);
-                node = null;
-                antallfjernet++;
-            }
-        }*/
-        /*while(inneholder(verdi)){
-            fjern(verdi);
-            antallfjernet++;
-            antall--;
-        }*/
         return antallfjernet;
     }
 

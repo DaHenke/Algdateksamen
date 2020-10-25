@@ -16,7 +16,8 @@ Se oblig-tekst for alle krav, og husk spesielt på følgende:
 
 Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, og hver logg-melding beskriver det jeg har gjort av endringer.
 
-* Oppgave 1: Løste ved å implementere ...
+* Oppgave 1: Løste oppgaven ved å bruke kode fra kompendium til Ulf Uttersrud, kapittel 5.2.3 a). Metoden starter i roten. Starter med å flytte p til venstre eller høyre, avhenig av om verdien vi skal legge inn er mindre enn eller lik p. q setter vi til å være p sin forelder.
+             Fortsetter til p er ute av treet og q er den siste vi passerte. Oppretter så en ny node med q som forelder. Hvis q er null settes roten til å være p. Hvis verdien er mindre enn q settes vi den til å være venstre barn. Hvis større setter vi den til høyre barn. antall øker deretter med 1.
 * Oppgave 2: Løste ved å først sette opp en if-setning som sjekker om binærtreet er tomt eller ikke og inneholder verdien eller ikke. Hvis det er tomt returneres 0.
              Deretter initialiserer jeg en teller, som skal øke hvis metoden finner verdien jeg ser etter, og en hjelpenode for å traversere gjennom treet.
              Når hjelpenoden ikke er null starter jeg i rotnoden. 
@@ -46,4 +47,10 @@ Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, o
              Til slutt i metoden returneres en ferdig fylt ut ArrayList.
              For deserialize opprettes først et nytt Binært tre som tar inn comparatoren c. Deretter bruker jeg en for-løkke som går gjennom ArrayListen jeg tar inn, og legger inn nye noder per index ved å kalle på leggInn-metoden fra oppgave 1 (se beskrivelse for oppgave 1).
              Til slutt returnerer jeg det fullstendige binære treet.
-* Oppgave 6: 
+* Oppgave 6: Løste oppgaven ved å implementere kode i fjern(T) fra kompendium til Ulf Uttersrud, kapittel 5.2.8 d). 
+             I denne metoden sjekker jeg først om treet er tomt og om det inneholder verdien som er ønsket fjernet. Først oppretter jeg en hjelpenode, for så å traversere gjennom arrayet til vi finner den først noden som inneholder verdien. Hvis vi ikke finner verdien returnerer metoden false.
+             Deretter sjekker vi de ulike tilfellene vi kan får; 1) p har ingen barn. Hvis p er roten settes rot og dens forelder til å være null. Hvis p er et venstre barn vil den ha forelder q. Hvis p er venstre barn til q settes q.venstre til null. Det samme blir gjort hvis per høyre barn.
+             2) p har nøyaktig ett barn. Her settes p sine barn til å være q sine barn, og foreldre-referansen til p fjernes. 3) p har to barn. Her finner vi neste i inorden. Hvis r har et venstre barn setter vi s til å være r sin forelder, og r til å være venstre barnet. Vi kopierer så verdien i r til p.
+             Til slutt sjekker vi om s og p er samme node, og setter r sitt høyre barn til å være s sitt venstre barn eller høyre barn.
+             For fjernAlle(T) sjekker jeg først om treet inneholder verdien. Hvis ikke returneres 0. Deretter sjekker jeg om det bare er en node i treet og om denne noden er i treet eller ikke. Metoden sjekker så om verdien ligger på venstre eller høyre side og fjerner verdien når noden p har verdien. antallfjernet øker ved hver fjerning.
+             nullstill() traverserer gjennom treet i postorden ved å først finne den ytterst venstre noden. Denne nodens venstre og høyre barn blir nullet ut, og metoden traverserer videre ved å kalle på nestePostorden. antall blir redusert for hver fjerning og når metoden kommer til rot blir den nullet ut.
