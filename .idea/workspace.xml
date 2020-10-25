@@ -19,9 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Får fortsatt StackOverflowError på nullstill(). Stopper med oppgaven for nå.">
+    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Fikset kode i fjernAlle(T). nullstill() får fortsatt StackOverflowError.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +168,7 @@
       <workItem from="1603559430733" duration="33000" />
       <workItem from="1603560652954" duration="869000" />
       <workItem from="1603564341480" duration="5400000" />
-      <workItem from="1603626867758" duration="7897000" />
+      <workItem from="1603626867758" duration="10090000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -315,7 +314,13 @@
       <option name="presentableId" value="LOCAL−00024" />
       <updated>1603558463198</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL−00025" summary="Fikset kode i fjernAlle(T). nullstill() får fortsatt StackOverflowError.">
+      <created>1603635014948</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1603635014948</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +362,8 @@
     <MESSAGE value="Testet nullstill(T) og fjernAlle(T). Feil på 6u i fjernAlle(T) og får StackOverflowError i nullstill(T)" />
     <MESSAGE value="Rettet opp feil på fjernAlle(T). Får fortsatt StackOverflowError på nullstill()" />
     <MESSAGE value="Får fortsatt StackOverflowError på nullstill(). Stopper med oppgaven for nå." />
-    <option name="LAST_COMMIT_MESSAGE" value="Får fortsatt StackOverflowError på nullstill(). Stopper med oppgaven for nå." />
+    <MESSAGE value="Fikset kode i fjernAlle(T). nullstill() får fortsatt StackOverflowError." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fikset kode i fjernAlle(T). nullstill() får fortsatt StackOverflowError." />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603382641615">
@@ -368,29 +374,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="320" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603385938970" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603634180175">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603636340874">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603634180175" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603636340874" />
     <state width="1317" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603634180174">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603636340873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603634180174" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603636340873" />
     <state width="1317" height="179" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603634180174">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603636340873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603386993780" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603634180174" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603636340873" />
     <state width="1317" height="179" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603634180174">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603636340873">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603634180174" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603636340873" />
     <state width="1317" height="179" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1603559080445">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -416,11 +422,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603558464650">
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603635016325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603385942547" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603558464650" />
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603635016325" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

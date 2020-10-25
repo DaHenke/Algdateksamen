@@ -305,11 +305,12 @@ public class EksamenSBinTre<T> {
     }
 
     public void nullstill() {
-        //throw new UnsupportedOperationException("Ikke kodet ennå!");
-        while(!tom()){
-            fjern(førstePostorden(rot).verdi);
-            System.out.println(antall);
-            nullstill();
+        Node<T> p = førstePostorden(rot);
+        while (p != null) {
+            p.venstre = null;
+            p.høyre = null;
+            antall--;
+            p = nestePostorden(p);
         }
     }
 
