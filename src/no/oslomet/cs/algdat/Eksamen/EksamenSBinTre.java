@@ -1,8 +1,5 @@
 package no.oslomet.cs.algdat.Eksamen;
 
-
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.*;
 
 public class EksamenSBinTre<T> {
@@ -143,7 +140,7 @@ public class EksamenSBinTre<T> {
                         barn.forelder = q;
                     }
                 }
-            } else { //tilfelle 3
+            } else {
                 Node<T> s = p, r = p.høyre;
                 while (r.venstre != null) {
                     s = r;
@@ -330,78 +327,4 @@ public class EksamenSBinTre<T> {
         }
         return tree;
     }
-
-    public static void main(String[] args){
-        //EksamenSBinTre<String> tre = new EksamenSBinTre<>(Comparator.naturalOrder());
-        //System.out.println(tre.antall);
-
-        System.out.println("--------------Oppgave 1--------------");
-        Integer[] a1 = {4,7,2,9,5,10,8,1,3,6};
-        EksamenSBinTre<Integer> tre1 = new EksamenSBinTre<>(Comparator.naturalOrder());
-        for (int verdi : a1) tre1.leggInn(verdi);
-        System.out.println(tre1.antall());
-
-
-        System.out.println("--------------Oppgave 2--------------");
-        Integer[] a2 = {4,7,2,9,4,10,8,7,4,6};
-        EksamenSBinTre<Integer> tre2 = new EksamenSBinTre<>(Comparator.naturalOrder());
-        for(int verdi : a2) tre2.leggInn(verdi);
-
-        System.out.println(tre2.antall());
-        System.out.println(tre2.antall(5));
-        System.out.println(tre2.antall(4));
-        System.out.println(tre2.antall(7));
-        System.out.println(tre2.antall(10));
-
-        System.out.println("--------------Oppgave 5--------------");
-        Integer[] a5 = {4,7,2,9,4,10,8,7,4,6};
-        EksamenSBinTre<Integer> tre5 = new EksamenSBinTre<>(Comparator.naturalOrder());
-        for(int verdi : a5) {
-            System.out.print(verdi+", ");
-            tre5.leggInn(verdi);
-        }
-        System.out.println();
-        tre5.serialize();
-        deserialize(tre5.serialize(), Comparator.naturalOrder());
-
-        System.out.println("--------------Oppgave 6--------------");
-        EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
-        /*int[] a6 = {4,7,2,9,4,10,8,7,4,6,1};
-
-        for(int verdi : a6) tre6.leggInn(verdi);
-        System.out.println(tre6.toStringPostOrder());
-        System.out.println(tre6.fjernAlle(4));
-        //tre6.fjernAlle(7);
-        System.out.println("her:" + tre6.toStringPostOrder());
-        //tre6.fjern(8);
-
-        System.out.println(tre6.antall());
-
-        System.out.println(tre6 + " " + tre6.toStringPostOrder());
-
-        tre6.nullstill();
-        System.out.println(tre6.toStringPostOrder());*/
-        /*EksamenSBinTre<Integer> tre6 = new EksamenSBinTre<>(Comparator.naturalOrder());
-        int[] a = {6, 3, 9, 1, 5, 7, 10, 2, 4, 8, 11, 6, 8};
-        for (int verdi : a) tre6.leggInn(verdi);
-        System.out.println("Antall: "+tre6.antall());
-        System.out.println(tre6.toStringPostOrder());
-        tre6.fjern(10);
-        System.out.println(tre6.toStringPostOrder());
-
-        tre6.fjernAlle(8);
-        System.out.println(tre6.toStringPostOrder());
-
-        tre6.nullstill();
-        System.out.println(tre6.toStringPostOrder());*/
-
-        int[] b = {1, 4, 1, 3, 1, 2, 1, 1};
-        for (int verdi : b) tre6.leggInn(verdi);
-        System.out.println(tre6.toStringPostOrder());
-        System.out.println(tre6.fjernAlle(1));
-        System.out.println(tre6.toStringPostOrder());
-    }
-
-
-
 } // ObligSBinTre

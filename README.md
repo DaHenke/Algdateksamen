@@ -54,3 +54,10 @@ Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 16 commits totalt, o
              Til slutt sjekker vi om s og p er samme node, og setter r sitt høyre barn til å være s sitt venstre barn eller høyre barn.
              For fjernAlle(T) sjekker jeg først om treet inneholder verdien. Hvis ikke returneres 0. Deretter sjekker jeg om det bare er en node i treet og om denne noden er i treet eller ikke. Metoden sjekker så om verdien ligger på venstre eller høyre side og fjerner verdien når noden p har verdien. antallfjernet øker ved hver fjerning.
              nullstill() traverserer gjennom treet i postorden ved å først finne den ytterst venstre noden. Denne nodens venstre og høyre barn blir nullet ut, og metoden traverserer videre ved å kalle på nestePostorden. antall blir redusert for hver fjerning og når metoden kommer til rot blir den nullet ut.
+             
+* Warnings: 1) høyre gir Non-ASCII warning. Valgt å ikke gjøre noe med dette
+            2) endringer er aldri brukt fordi foreleser sa at man ikke trenger å bry seg om disse.
+            3) leggInn(T) sin boolean-verdi blir aldri brukt. Valgt å ikke gjøre noe med fordi testene fortsatt blir godkjent.
+            4) får warning på p at den kan få NullPointerException. Testene blir fortsatt godkjent så ikke valgt å gjøre noe med det.
+            5) førstePostOrden gir Non-ASCII warning. Valgt å ikke gjøre noe med dette.
+            6) for-løkke i deserialize kan forenkles. Valgt å ikke gjøre dette siden det ikke er nødvendig.              

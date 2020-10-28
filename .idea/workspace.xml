@@ -19,11 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Fikset fjernAlle til å funke på 6u. Alle tester er godkjent.">
+    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Skrevet forklaring til oppgave 6 og 1 i README.md, samt fjernet kø i fjernAlle(T).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mappeeksamen.bundle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algdateksamen/no/oslomet/cs/algdat/Eksamen/EksamenTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,8 +148,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.EksamenTest" />
-        <item itemvalue="JUnit.EksamenTest.oppgave6" />
         <item itemvalue="Application.EksamenSBinTre" />
+        <item itemvalue="JUnit.EksamenTest.oppgave6" />
         <item itemvalue="JUnit.EksamenTest.oppgave5" />
         <item itemvalue="JUnit.EksamenTest.oppgave4" />
       </list>
@@ -171,7 +175,11 @@
       <workItem from="1603559430733" duration="33000" />
       <workItem from="1603560652954" duration="869000" />
       <workItem from="1603564341480" duration="5400000" />
-      <workItem from="1603626867758" duration="17475000" />
+      <workItem from="1603626867758" duration="21666000" />
+      <workItem from="1603691142334" duration="1466000" />
+      <workItem from="1603708975180" duration="11550000" />
+      <workItem from="1603790763081" duration="9283000" />
+      <workItem from="1603902033484" duration="907000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -335,7 +343,13 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1603639546251</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="Skrevet forklaring til oppgave 6 og 1 i README.md, samt fjernet kø i fjernAlle(T).">
+      <created>1603645265744</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1603645265744</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +368,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Testet oppgave 0 og får riktig utskrift. Starter på oppgave 1" />
     <MESSAGE value="Fullført oppgave 1. Test passert" />
     <MESSAGE value="Starter på oppgave 2. Lagt til utskriftskoden i main" />
     <MESSAGE value="Ferdig med oppgave 2. Får riktig utskrift og test er godkjent." />
@@ -379,7 +392,8 @@
     <MESSAGE value="Fikset kode i fjernAlle(T). nullstill() får fortsatt StackOverflowError." />
     <MESSAGE value="fjernAlle(T) får feil på 6u. nullstill() funker nå" />
     <MESSAGE value="Fikset fjernAlle til å funke på 6u. Alle tester er godkjent." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fikset fjernAlle til å funke på 6u. Alle tester er godkjent." />
+    <MESSAGE value="Skrevet forklaring til oppgave 6 og 1 i README.md, samt fjernet kø i fjernAlle(T)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Skrevet forklaring til oppgave 6 og 1 i README.md, samt fjernet kø i fjernAlle(T)." />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603382641615">
@@ -394,29 +408,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603639715366" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1603644100166">
+    <state width="1877" height="233" key="GridCell.Tab.0.bottom" timestamp="1603902071816">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1360.728@0.0.1360.728" timestamp="1603726599131" />
     <state width="1493" height="204" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603644100166" />
+    <state width="1877" height="233" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603902071816" />
     <state width="1317" height="179" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1603644100166">
+    <state width="1877" height="233" key="GridCell.Tab.0.center" timestamp="1603902071815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1360.728@0.0.1360.728" timestamp="1603726599131" />
     <state width="1493" height="204" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603644100166" />
+    <state width="1877" height="233" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603902071815" />
     <state width="1317" height="179" key="GridCell.Tab.0.center/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1603644100166">
+    <state width="1877" height="233" key="GridCell.Tab.0.left" timestamp="1603902071815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1360.728@0.0.1360.728" timestamp="1603726599131" />
     <state width="1493" height="204" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1603386993780" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603644100166" />
+    <state width="1877" height="233" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603902071815" />
     <state width="1317" height="179" key="GridCell.Tab.0.left/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1603644100166">
+    <state width="1877" height="233" key="GridCell.Tab.0.right" timestamp="1603902071815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1360.728@0.0.1360.728" timestamp="1603726599131" />
     <state width="1493" height="204" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603386993781" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603644100166" />
+    <state width="1877" height="233" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603902071815" />
     <state width="1317" height="179" key="GridCell.Tab.0.right/0.0.1920.1040/1920.104.1360.728@1920.104.1360.728" timestamp="1603402610124" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1603559080445">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -442,11 +460,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603639547692">
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603645267753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603385942547" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603639547692" />
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603645267753" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
