@@ -182,7 +182,7 @@ public class EksamenSBinTre<T> {
             if(p.venstre == null && p.høyre == null){                        //hvis vi er på en bladnode går vi ut av løkken
                 break;
             }
-            if(comp.compare(verdi,p.verdi)>=0){                              //hvis nodens verdi er større enn eller lik verdien fortsetter vi til høyre
+            if(comp.compare(verdi,p.verdi)>=0){                              //hvis nodens verdi er mindre enn eller lik verdien fortsetter vi til høyre
                 if(p != rot){
                     p = p.høyre;
                 }
@@ -193,7 +193,7 @@ public class EksamenSBinTre<T> {
                 if(p.høyre != null) {                                        //fortsetter til høyre så lenge noden har høyre barn
                     p = p.høyre;
                 }
-            }else{                                                           //hvis nodens verdi er mindre enn verdien går vi til venstre
+            }else{                                                           //hvis nodens verdi er større enn verdien går vi til venstre
                 p = p.venstre;
                 if(p.verdi == verdi){                                        //hvis noden har verdien sletter vi noden
                     fjern(p.verdi);

@@ -14,7 +14,7 @@ Se oblig-tekst for alle krav, og husk spesielt på følgende:
 
 # Beskrivelse av oppgaveløsning (4-8 linjer/setninger per oppgave)
 
-Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 33 commits totalt, og hver logg-melding beskriver det jeg har gjort av endringer.
+Vi har brukt git til å dokumentere arbeidet vårt. Jeg har 34 commits totalt, og hver logg-melding beskriver det jeg har gjort av endringer.
 
 * Oppgave 1: Løste oppgaven ved å bruke kode fra kompendium til Ulf Uttersrud, kapittel 5.2.3 a). Metoden starter i roten. Starter med å flytte p til venstre eller høyre, avhenig av om verdien vi skal legge inn er mindre enn eller lik p. q setter vi til å være p sin forelder.
              Fortsetter til p er ute av treet og q er den siste vi passerte. Oppretter så en ny node med q som forelder. Hvis q er null settes roten til å være p. Hvis verdien er mindre enn q settes vi den til å være venstre barn. Hvis større setter vi den til høyre barn. antall øker deretter med 1.

@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Laget ny bundle-fil og skrevet totalt antall commits i README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_10_2020_21_43_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_10_2020_21_43__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="928c26c0-04dd-4de8-9a73-864ee13b5c26" name="Default Changelist" comment="Skrevet kildekodekommentarer for alle metodene">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/no/oslomet/cs/algdat/Eksamen/EksamenSBinTre.java" afterDir="false" />
@@ -180,7 +178,7 @@
       <workItem from="1603708975180" duration="11550000" />
       <workItem from="1603790763081" duration="9283000" />
       <workItem from="1603902033484" duration="6604000" />
-      <workItem from="1603984768691" duration="1297000" />
+      <workItem from="1603984768691" duration="2359000" />
     </task>
     <task id="LOCAL−00001" summary="Testet at mappeeksamen.bundle blir laget">
       <created>1603195229345</created>
@@ -362,7 +360,13 @@
       <option name="presentableId" value="LOCAL−00030" />
       <updated>1603903452222</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL−00031" summary="Skrevet kildekodekommentarer for alle metodene">
+      <created>1603986153366</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1603986153366</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +385,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ferdig med oppgave 2. Får riktig utskrift og test er godkjent." />
     <MESSAGE value="Endret litt på oppgave 2. Skrevet forklaring i README.md. Startet på oppgave 3. Får gult kryss på test og feil på 3d." />
     <MESSAGE value="Fullført oppgave 3. Test er godkjent." />
     <MESSAGE value="Skrevet forklaring til oppgave 3 i README.md og endret litt på kode i oppgave 3" />
@@ -406,7 +409,8 @@
     <MESSAGE value="Skrevet forklaring til oppgave 6 og 1 i README.md, samt fjernet kø i fjernAlle(T)." />
     <MESSAGE value="Skrevet forklaring til warnings, fjernet main og utskrifter i kildekoden. Fjernet gammel bundle-fil også." />
     <MESSAGE value="Laget ny bundle-fil og skrevet totalt antall commits i README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laget ny bundle-fil og skrevet totalt antall commits i README.md" />
+    <MESSAGE value="Skrevet kildekodekommentarer for alle metodene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skrevet kildekodekommentarer for alle metodene" />
   </component>
   <component name="WindowStateProjectService">
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1603382641615">
@@ -473,20 +477,20 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603196805224" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603903453859">
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2" timestamp="1603986154681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="134" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603385942547" />
-    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603903453859" />
+    <state x="451" y="169" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603986154681" />
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1603192763975">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="306" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1603192763975" />
-    <state x="723" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603903464036">
+    <state x="723" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603986164995">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1603195246454" />
-    <state x="723" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603903464036" />
+    <state x="723" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/1920.104.1360.728@0.0.1920.1040" timestamp="1603986164995" />
     <state x="505" y="256" width="909" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603537605435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
