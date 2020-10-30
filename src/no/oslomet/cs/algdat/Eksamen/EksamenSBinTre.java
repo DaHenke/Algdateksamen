@@ -132,12 +132,12 @@ public class EksamenSBinTre<T> {
                 } else if (p == q.venstre) {                                 //sletter p og angir p sitt venstre barn til q
                     q.venstre = barn;
                     if (barn != null) {
-                        barn.forelder = q;
+                        barn.forelder = q;                                   //angir barnet til å ha noden over p som forelder
                     }
                 } else {                                                     //sletter p og angir p sitt høyre barn til q
                     q.høyre = barn;
                     if (barn != null) {
-                        barn.forelder = q;
+                        barn.forelder = q;                                   //angir barnet til å ha noden over p som forelder
                     }
                 }
             } else {                                                         //tilfelle 3)
